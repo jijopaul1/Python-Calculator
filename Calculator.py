@@ -7,7 +7,7 @@ def presstheno(num):
     global expression
     expression = expression + str(num)
     box.set(expression)
- 
+
 def equaltoo():
     global expression
     total = str(eval(expression))
@@ -53,11 +53,8 @@ if __name__ == "__main__":
     button_3=Button(w,text="3",command=lambda: presstheno(3),width=10)
     button_3.grid(row=3,column=3)
     
-    button_0=Button(w,text="0",command=lambda: presstheno(0),width=10)
-    button_0.grid(row=4,column=1)
-    
-    button_dot=Button(w,text=".",command=lambda: presstheno('.'),width=10)
-    button_dot.grid(row=4,column=2)
+    button_0=Button(w,text="0",command=lambda: presstheno(0),width=23)
+    button_0.grid(row=4,column=1,columnspan=2)
     
     button_plus=Button(w,text="+",command=lambda: presstheno('+'),width=10)
     button_plus.grid(row=1,column=5,padx=5,pady=10)
@@ -65,7 +62,7 @@ if __name__ == "__main__":
     button_minus=Button(w,text="-",command=lambda: presstheno('-'),width=10)
     button_minus.grid(row=1,column=6,padx=5,pady=10)
     
-    button_power=Button(w,text="^",command=lambda: presstheno('^'),width=10)
+    button_power=Button(w,text=".",command=lambda: presstheno('.'),width=10)
     button_power.grid(row=3,column=5,padx=5,pady=10)
     
     button_multi=Button(w,text="*",command=lambda: presstheno('*'),width=10)
